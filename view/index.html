@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>superPunGame</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
+  <script type="text/javascript" src="core.js"></script>
+  <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+   <link rel="stylesheet" href="style.css">
+
+   <!-- Compiled and minified JavaScript -->
+   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+<main class="mdl-layout__content">
+
+<div  ng-app="myApp" class='container' >
+  <div ng-controller="mainWindow">
+    <h2>{{parent.title}}</h2>
+
+    <input type="text" ng-model="name" placeholder="Username"  ng-show="!parent.showPun && !parent.showAdmin">
+    <input type="password" ng-model="password" placeholder="password"  ng-show="!parent.showPun && !parent.showAdmin"><br>
+  <div ng-controller="login" ng-show="parent.showCreate ">
+<div  ng-show="!parent.showPun  && !parent.showAdmin">
+    <button  class='btn' ng-click="login()">Submit</button>
+    <a href="" ng-click="toggleCreate()">new User?</a>
+
+  </div>
+  <img class='responsive-img' ng-src="{{pictureUrl}}" ng-show="(parent.showPun || parent.showAdmin) && theImage!==''">
+
+  <div ng-show="parent.showAdmin">
+    <table class='highlight'>
+        <thead >
+            <th data-field="pun">pun</th>
+        </thead>
+        <tr ng-click = "selectWinner(x)" ng-repeat="x in usrs" class="highlight">
+            <td ng-show="x.pun!=''">{{ x.pun }}</td>
+        </tr>
+    </table>
+
+  </div>
+    <div  ng-show="parent.showPun">
+    <h5 class='left'>Judge: {{judge}}</h5> <h5 class='right'> Score: {{score}}</h5>
+    <textarea ng-model="pun" placeholder="write pun here"></textarea>
+    <button class='btn' ng-click="submitPun()">Submit</button>
+  </div>
+
+
+  </div>
+  <div  ng-hide="parent.showCreate" ng-model="newUser" ng-controller='create'>
+    <button class='btn' ng-click="create()">Submit</button>
+    <a href="" ng-click="toggleCreate()">return to Login.</a>
+
+  </div>
+
+</div>
+</div>
+</main>
+<footer class="page-footer blue-grey">
+         <div class="container">
+
+               <p class="white-text">superPunGame</p>
+
+         </div>
+
+       </footer>
+  </body>
+
+  </html>
