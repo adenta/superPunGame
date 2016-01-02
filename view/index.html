@@ -29,7 +29,6 @@
 <div  ng-show="!parent.showPun  && !parent.showAdmin">
     <button  class='btn' ng-click="login()">Submit</button>
     <a href="" ng-click="toggleCreate()">new User?</a>
-
   </div>
   <img class='responsive-img' ng-src="{{pictureUrl}}" ng-show="(parent.showPun || parent.showAdmin) && theImage!==''">
 
@@ -52,7 +51,10 @@
 
 
   </div>
-  <div  ng-hide="parent.showCreate" ng-model="newUser" ng-controller='create'>
+  <div class='row' ng-hide="parent.showCreate" ng-model="newUser" ng-controller='create'>
+    <h5 class='col s12 m3'>User Info:</h5>
+    <input class='col  s12 m5' type="text" ng-model="first" placeholder="First" >
+    <input class='col s12 m4' type="text" ng-model="last" placeholder="Last">
     <button class='btn' ng-click="create()">Submit</button>
     <a href="" ng-click="toggleCreate()">return to Login.</a>
 
