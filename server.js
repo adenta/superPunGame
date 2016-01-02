@@ -15,8 +15,11 @@ var Room = require('./app/models/room'); // get room model.
 var crypto = require('crypto'),
   algorithm = 'aes-256-ctr',
   password = 'd6F3Efeq';
+var cors = require('cors');
 
-
+ var corsOptions = {
+   origin: 'http://puns.denta.co'
+ };
 // =======================
 // configuration =========
 // =======================
@@ -33,6 +36,7 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/view'));
 // use morgan to log requests to the console
 app.use(morgan('dev'));
+app.use(cors());
 
 
 
