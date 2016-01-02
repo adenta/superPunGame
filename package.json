@@ -10,6 +10,7 @@
   "dependencies": {
     "angular2": "2.0.0-alpha.44",
     "body-parser": "~1.9.2",
+    "cors": "^2.7.1",
     "express": "~4.9.8",
     "flickr": "^0.2.0",
     "jsonwebtoken": "~1.1.2",
