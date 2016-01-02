@@ -1,4 +1,4 @@
-var host = "https://obscure-hollows-3603.herokuapp.com/";
+var host = "https://obscure-hollows-3603.herokuapp.com";
 var toast = function(msg) {
   Materialize.toast(msg, 4000)
 };
