@@ -9,6 +9,7 @@ var mySchema = new Schema({
    name: { type: String, required: true, unique: true },
    first: String,
    last: String,
+   phone: String,
    password: String,
    pun: String,
    score: Number

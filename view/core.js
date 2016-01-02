@@ -118,7 +118,8 @@ app.controller('create', function($scope, $http) {
         name: $scope.name,
         password: $scope.password,
         first: $scope.first,
-        last: $scope.last
+        last: $scope.last,
+        phone: $scope.phone,
       })
       .then(function successCallback(response) {
         toast(response.data.message);

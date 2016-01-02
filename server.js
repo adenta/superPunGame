@@ -90,6 +90,7 @@ app.post('/setup', function(req, res) {
       pun: "",
       first: req.body.first,
       last: req.body.last,
+      phone: req.body.phone,
       score: 0
     });
     console.log(newUser);
