@@ -1,7 +1,8 @@
 # superPunGame
 caption contest's with friends.
+Project hosted at <http://puns.denta.co>
 
-#requirements
+##requirements
 for this program to work, you will need a 'config.js' file in the root directory with the following information:
 
 module.exports.db = {
@@ -15,3 +16,6 @@ module.exports.flickrConnect = {
   secret:"FLICKR_SECRET"
 
 }
+
+
+
