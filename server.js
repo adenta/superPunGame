@@ -84,15 +84,15 @@ app.post('/setup', function(req, res) {
   // create a sample user
   encrypt(req.body.password, function(err, enc) {
     if (err)   console.log(err);
-
     var newUser = new User({
       name: req.body.name,
       password: enc,
       pun: "",
-      firstName: req.body.first,
-      lastName: req.body.last,
+      first: req.body.first,
+      last: req.body.last,
       score: 0
     });
+    console.log(newUser);
 
     // save the sample user
     newUser.save(function(err) {

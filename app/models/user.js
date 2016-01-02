@@ -7,6 +7,8 @@ var Schema = mongoose.Schema;
 // set up a mongoose model and pass it using module.exports
 var mySchema = new Schema({
    name: { type: String, required: true, unique: true },
+   first: String,
+   last: String,
    password: String,
    pun: String,
    score: Number

@@ -116,7 +116,9 @@ app.controller('create', function($scope, $http) {
   $scope.create = function() {
     $http.post(host + "/setup", {
         name: $scope.name,
-        password: $scope.password
+        password: $scope.password,
+        first: $scope.first,
+        last: $scope.last
       })
       .then(function successCallback(response) {
         toast(response.data.message);
