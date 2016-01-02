@@ -89,6 +89,8 @@ app.post('/setup', function(req, res) {
       name: req.body.name,
       password: enc,
       pun: "",
+      firstName: req.body.first,
+      lastName: req.body.last,
       score: 0
     });
 
