@@ -16,6 +16,3 @@ module.exports.flickrConnect = {
   secret:"FLICKR_SECRET"
 
 }
-
-
-
